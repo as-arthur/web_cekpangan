@@ -51,7 +51,7 @@ section,
 
 
 :root {
-  --bs-blue: #1E3A8A;
+  --bs-blue: #4477CE;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -82,7 +82,7 @@ section,
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-blue-rgb: 0, 51, 124;
+  --bs-blue-rgb: 68, 119, 206;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
