@@ -61,8 +61,9 @@
         <div class="container">
             <h2 class="fw-bolder my-4 text-blue">Prediksi Harga <br> Bahan Pangan</h2>
             <div class="card mb-4 shadow ">
-                <div class="row">
-                  <form id="prediction-form">
+                <form id="prediction-form">
+                    <div class="row">
+                  
                     <div class="col-sm mx-3 mt-2">
                         <p>
                             <label class="fw-bold">Provinsi</label>
@@ -97,8 +98,8 @@
                             </select>
                         </p>
                     </div>
-                  </form>
                 </div>
+            </form>
             
                 <div class="container">
                     <div class="row my-2 justify-content-sm-center text-black fw-semibold">
@@ -127,7 +128,7 @@
                         <div class="col-lg">
                             <div class="card">
                                 <div class="card-body">
-                                    <canvas id="myChart"></canvas>
+                                    <canvas id="myChart" style="height: 350px;"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +260,12 @@
                         // Update average RMSE and accuracy table
                         const averageRow = `<tr>
                             <td>Rata-Rata Akurasi</td>
-                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> 
                             <td>${data.accuracy.accuracy_mean}%</td>
                         </tr>`;
                         document.getElementById('rata-rata').getElementsByTagName('tbody')[0].innerHTML = averageRow;
@@ -298,21 +304,21 @@
             labels: [],
             datasets: [
                 {
-                    label: 'Harga Real',
+                    label: 'Harga Asli',
                     data: [],
-                    borderWidth: 1
+                    borderWidth: 2
                 },
                 {
                     label: 'Prediksi Harga',
                     data: [],
-                    borderWidth: 1
+                    borderWidth: 2
                 },
             ]
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: false  
                 }
             }
         }
