@@ -8,7 +8,7 @@
     <title>CekPangan | Website Prediksi Harga Pangan</title>
 
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/img/logo-hd.png" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
 
     <style>
         .banner-image {
-            background-image: url(assets/img/bg-4.jpg);
+            background-image: url(assets/img/bg-1.jpg);
             background-size: cover;
         }
     </style>
@@ -41,9 +41,9 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navbar"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active bg-gradient" href="CekPangan.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active " href="CekPangan.html#prediksi">Tabel Harga</a></li>
-                    <li class="nav-item"><a class="nav-link active " href="CekPangan.html#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-bottom active bg-gradients" href="CekPangan.html#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-bottom active " href="CekPangan.html#prediksi">Tabel Harga</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-bottom active " href="CekPangan.html#profil">Profil</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <section id="home" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
         <div class="content text-center">
             <h1 class="text-white">Selamat Datang di CekPangan!</h1>
-            <p class="lead mb-0 text-white"><span class="fw-bold">CekPangan</span> adalah platform inovatif yang dirancang untuk membantu masyarakat<br> memantau dan memprediksi harga pangan dalam satu bulan ke depan dengan akurasi tinggi.<br> Kami menggunakan metode <span class="fw-bold">Long Short-Term Memory (LSTM)</span>. Dengan memanfaatkan data<br> historis dan algoritma canggih, CekPangan memberikan prakiraan harga yang dapat membantu konsumen<br> dan pelaku bisnis dalam membuat keputusan yang lebih tepat terkait kebutuhan pangan mereka.</p>
+            <p class="lead mb-0 text-white" style="font-size: 23px;"><span class="fw-bold">CekPangan</span> adalah platform inovatif yang dirancang untuk membantu masyarakat memantau<br> dan memprediksi harga pangan dalam satu bulan ke depan dengan akurasi tinggi. Kami menggunakan<br> metode <span class="fw-bold">Long Short-Term Memory (LSTM)</span>. Dengan memanfaatkan data historis dan algoritma<br> canggih, CekPangan memberikan perkiraan harga yang dapat membantu konsumen dan pelaku<br> bisnis dalam membuat keputusan yang lebih tepat terkait kebutuhan pangan mereka.</p>
         </div>
     </section>
 
@@ -140,16 +140,16 @@
 
     <section id="profil">
         <div class="container">
-            <h2 class="fw-bolder my-4 text-center text-blue">Team</h2>
+            <h2 class="fw-bolder my-2 text-center text-blue">Team</h2>
             <div class="row">
                 <div class="col-lg">
-                    <div class="card mb-4">
+                    <div class="card mb-3">
                         <a><img class="card-img-top card-img-bottom" src="assets/img/della.png" alt="..."></a>
                     </div>
                     <div class="text-blue">
                         <h5 class="card-title">Della Adelia</h5>
                         <p class="text-muted">Data Analyst <br>della.210170051@mhs.unimal.ac.id</p>
-                        <p class="text-center text-black fw-bold">"slogan"</p>
+                        <p class="text-center text-black fw-bold">"Bismillah lulus tanpa skripsi"</p>
                     </div>
                 </div>
                 <div class="col-lg">
@@ -159,7 +159,7 @@
                     <div class="text-blue">
                         <h5 class="card-title">Muhammad Fathurrahman</h5>
                         <p class="text-muted">Web Developer <br>muhammad.220170212@mhs.unimal.ac.id</p>
-                        <p class="text-center text-black fw-bold">"Bismillah lulus tanpa skripsi"</p>
+                        <p class="text-center text-black fw-bold">"Ga tau, males, pengen ke Semarang..."</p>
                     </div>
                 </div>
                 <div class="col-lg">
@@ -169,7 +169,7 @@
                     <div class="text-blue">
                         <h5 class="card-title">Reza Dwi Putri</h5>
                         <p class="text-muted">Data Analyst <br>reza.210170061@mhs.unimal.ac.id</p>
-                        <p class="text-center text-black fw-bold">"slogan"</p>
+                        <p class="text-center text-black fw-bold">"Juara, Juara, Juara"</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
     <!-- Footer-->
     <footer class="py-5 bg-blue">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; The HarvestHive 2024</p>
+            <p class="m-0 text-center text-white">Copyright &copy; The HarvestHive 2024<br>Malikussaleh University</p>
             <p class="m-0 text-center text-white">Powered by advanced Long Short-Term Memory (LSTM) technology for accurate and reliable food price predictions.</p>
         </div>
     </footer>
@@ -213,10 +213,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const provinsiSelect = document.getElementById('provinsi');
             const komoditasSelect = document.getElementById('komoditas');
-            const apiEndpoint = 'http://127.0.0.1:5000/predict';
+            const apiEndpointPredict = 'http://127.0.0.1:5000/predict';
+            const apiEndpointPlot = 'http://127.0.0.1:5000/plot';
             let chartInstance; // Variable to hold the chart instance
 
-            function sendFormData() {
+            async function sendFormData() {
                 const formData = {
                     provinsi: parseInt(provinsiSelect.value),
                     komoditas: komoditasSelect.value,
@@ -225,21 +226,37 @@
 
                 console.log('Sending data:', formData); // Debugging: print the data to console
 
-                fetch(apiEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
+                try {
+                    const [responsePredict, responsePlot] = await Promise.all([
+                        fetch(apiEndpointPredict, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        }),
+                        fetch(apiEndpointPlot, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        })
+                    ]);
+
+                    if (!responsePredict.ok) {
+                        throw new Error('Network response was not ok for /predict');
                     }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Response:', data); // Debugging: print the response to console
+                    if (!responsePlot.ok) {
+                        throw new Error('Network response was not ok for /plot');
+                    }
+
+                    const data = await responsePredict.json();
+                    const dataPlot = await responsePlot.json();
+
+                    console.log('Response from /predict:', data); // Debugging: print the response to console
+                    console.log('Response from /plot:', dataPlot); // Debugging: print the response to console
+
                     if (data.predictions) {
                         // Update predictions table
                         const tableBody = document.getElementById('tabel-prediksi').getElementsByTagName('tbody')[0];
@@ -257,8 +274,8 @@
                             tableBody.insertAdjacentHTML('beforeend', row);
                         });
 
-                        // Update average RMSE and accuracy table
-                        const averageRow = `<tr>
+                            // Update average RMSE and accuracy table
+                            const averageRow = `<tr>
                             <td>Rata-Rata Akurasi</td>
                             <td></td>
                             <td></td>
@@ -269,19 +286,23 @@
                             <td>${data.accuracy.accuracy_mean}%</td>
                         </tr>`;
                         document.getElementById('rata-rata').getElementsByTagName('tbody')[0].innerHTML = averageRow;
-
-                        // Render or update the chart
-                        renderChart(data.predictions, formData.komoditas);
                     }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+
+                    // Render or update the chart with data from /plot
+                    renderChart(dataPlot.predictions, formData.komoditas);
+
+                }catch (error) {
+                        console.error('Error:', error);
+                    }
             }
 
             function renderChart(predictions, komoditas) {
-                myLineChart.data.datasets[0].data = predictions.map(prediction => prediction[komoditas + '_real']);
-                myLineChart.data.datasets[1].data = predictions.map(prediction => prediction[komoditas + '_prediksi']);
+                myLineChart.data.datasets[0].data = predictions.map(item => item[komoditas + '_real']);
+                myLineChart.data.datasets[0].order = 2;
+
+                myLineChart.data.datasets[1].data = predictions.map(item => item[komoditas + '_prediksi']);
+                myLineChart.data.datasets[1].order = 1;
+
                 myLineChart.data.labels = Array.from({ length: predictions.length }, (_, i) => String(i + 1).padStart(2, '0'));
                 myLineChart.update();
             }
@@ -293,6 +314,7 @@
             // Initial chart rendering
             sendFormData();
         });
+
     </script>
 
     <script>

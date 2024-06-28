@@ -10,8 +10,8 @@ window.onscroll = () => {
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(link => {
-                link.classList.remove('bg-gradient');
-                document.querySelector('nav a[href*=' + id + ']').classList.add('bg-gradient');
+                link.classList.remove('bg-gradients');
+                document.querySelector('nav a[href*=' + id + ']').classList.add('bg-gradients');
             });
         }
     });
@@ -19,8 +19,8 @@ window.onscroll = () => {
 
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
-        navLinks.forEach(nav => nav.classList.remove('bg-gradient'));
-        this.classList.add('bg-gradient');
+        navLinks.forEach(nav => nav.classList.remove('bg-gradients'));
+        this.classList.add('bg-gradients');
 
         // Smooth scroll to section
         let section = document.querySelector(this.getAttribute('href'));
